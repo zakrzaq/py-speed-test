@@ -1,0 +1,23 @@
+import speedtest as st
+
+# Set Best Server
+server = st.Speedtest()
+server.get_best_server()
+
+# Test Ping
+ping = server.results.ping
+print(f"Ping Speed: {ping}")
+
+# Test Download Speed
+print('Download test running...')
+down = server.download()
+down = down / 1000000
+print(f"Download Speed: {down} Mb/s")
+
+# Test Upload Speed
+print('Upload test running...')
+up = server.upload()
+up = up / 1000000
+print(f"Upload Speed: {up} Mb/s")
+
+
