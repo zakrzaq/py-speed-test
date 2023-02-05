@@ -1,2 +1,5 @@
 .null-ls*
 .env/
+build/
+dist/
+*.spec
